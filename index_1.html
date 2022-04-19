@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo - Horizontal Scrolling</title>
+
+        <meta name="description" content="Horizontal Scrolling with jQuery">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/estilo1.css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/eventos1.js"></script>
+
+        <style>
+            body {
+                width:1000%;
+                font-family:Verdana, Geneva, sans-serif;
+                font-size:12px;
+                color:#14253d;
+                text-align:justify;
+                position:absolute;
+                margin:0px;
+                overflow-y: hidden;
+            }
+            .section { 
+                display: block; 
+                height: 800px; 
+                float: left; 
+            }
+
+            .cover {
+                background-attachment: fixed;
+            }
+
+            .centralizar {
+                width: 50%;
+            }
+
+
+            #sobre, #programacao, #palestrantes, #localizacao {
+                padding-top: 9em;
+            }
+
+            #sobre p {
+                font-size: 20px;
+            }
+
+
+            #menu {
+                color: #fff;
+                left: -100px;
+                margin: 0 0 0 170px;
+                position: fixed;
+                top: 10px;
+                word-spacing: 10px;
+                z-index: 1000;
+                display: inline;
+            }
+
+
+            #menu ul li, #menu > li {
+                list-style: outside none none;
+                display: inline;
+            }
+
+            .active {
+                font-weight: bolder;
+                text-decoration: underline;
+                border: 1px solid #fff;
+            }
+
+            #menu a {
+                color: #fff;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+
+            .blue { background-color: #00ccff; width: 10%; }
+            .green { background-color: #0f9d00; width: 15%;}
+            .red { background-color: #F00; width: 15%; }
+            .yellow { background-color: #ffea00;  width: 15%;}
+
+            #left_col {
+                float:left;
+                width:40%;
+                padding: 5%;
+                background-color: #00ccff;
+            }
+            #right_col {
+                float:right;
+                width:40%;
+                padding: 5%;
+                background-color: #00ccff;
+            }
+
+            #formulario {
+                width: 90%;
+                
+            }
+        </style>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="mouse.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('html, body, *').mousewheel(function (e, delta) {
+                    this.scrollLeft -= (delta * 40);
+                    e.preventDefault();
+                });
+
+            });
+        </script>
+
+        <!-- Enable HTML5 for old browsers -->
+        <!--[if lte IE 8]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+
+        <div id="filler"></div>
+        <div id="logomarca" data-speed="25">
+             <a href="#home"><img src="img/logo.png" alt="logo" /></a>
+         </div> 
+        <div >
+            <ul id="menu">
+                <li><a class="active" href="#sobre">sobre</a></li>
+                <li><a href="#palestrantes">palestrantes</a></li>
+                <li><a href="#programacao">programação</a></li>
+                <li><a href="#inscricao">inscrição</a></li>
+                <li><a href="#localizacao">localização</a></li>
+            </ul>
+        </div>
+
+        <div id="container">
+
+            <div class="section blue">
+
+                <div id="home" class="page">
+                    <div class="content" id="titulo-principal">
+                        <h1>Semana<strong> Blumenauense</strong> da 
+                            <b>Tecnologia</b> <br/> da <strong>Informação</strong> e <strong>Comunicação</strong></h1>
+                        <p><span class="letra-azul"><strong>25-28</strong></span> Novembro - Faculdade de Tecnologia SENAI</p>
+                    </div>
+
+                    <div class="cover" data-speed="15">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section green">
+                <div id="sobre" class="page" >
+
+
+                    <div class="centralizar">
+                        <p id="margem">Com intuito de resgatar as grandes feiras da área de TI que ocorriam
+                            com frequência na década de 90 em Blumenau/SC, o SENAI/SC - Blumenau 
+                            realizou no ano de 2012 a 1ª. SEBLUTIC – Semana Blumenauense de Tecnologia 
+                            da Informação e Comunicação.</p>
+
+                        <p>Fazendo parte da Semana Tecnológica dos cursos da área de TI do SENAI/SC
+                            - Blumenau, esse evento tem por objetivo mostrar à comunidade, empresas,
+                            pesquisadores e acadêmicos da área, as novidades e assuntos pertinentes 
+                            à Tecnologia da Informação e Comunicação.</p>
+
+                        <p>Agora em sua segunda edição, a SEBLUTIC tem por objetivo ser um ambiente de 
+                            descoberta tecnológica e formação de negócios na área de TI, permitindo ao 
+                            público alvo (formado por empresas e profissionais de TI) aprenderem e apresentarem
+                            o que há de mais moderno no mercado de TI.</p>
+
+                        <h2 class="inscrevase"><a href="#">Inscreva-se!</a></h2>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="section red">
+
+                <div id="palestrantes" class="page" data-type="background" data-speed="4">
+                    <div class="centralizar">
+                        <ul>
+                            <li>
+                                <div id="palestrante1" class="rotation-container"> 
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva1</span> <br/> Web Designer</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante2" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante3" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante4" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante5" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante6" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante7" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div id="palestrante8" class="rotation-container">
+                                    <img src="img/exemplos.jpg" alt="Nome do Palestrante"/>
+                                    <p class="descricaoOpaca"><span class="nomesPalest">Paulo da Silva2</span> profissão</p>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                        <br style="clear:both"/>
+
+                        <h2 class="inscrevase"><a href="#">Inscreva-se!</a></h2>
+
+                    </div>
+                </div>
+            </div>
+
+
+         <div class="section yellow">
+                 <div id="fotoMetade1" class="page metade">
+                <div class="cover" data-speed="14"></div>
+
+            </div>
+            </div>
+            <div class="section yellow">
+                <div id="programacao" class="page">
+                    <div class="centralizar">
+
+                        <div id="menuProgramacao">
+                            <ul>
+                                <li><a onclick="menuProgramacao('dia1');" id="dia1menu">27/11</a></li>
+                                <li><a onclick="menuProgramacao('dia2');" id="dia2menu">28/11</a></li>
+                                <li><a onclick="menuProgramacao('dia3');" id="dia3menu">29/11</a></li>
+                                <li><a onclick="menuProgramacao('dia4');" id="dia4menu">30/11</a></li>
+                            </ul>
+                        </div>
+                        <div id="listaProgramacao">
+
+                            <div id="dia1">
+                                <p class="dataProgramacao">Terça feira, 27 de novembro</p>
+                                <ul> 
+                                    <li>
+                                        <div class="hora">18:00</div>
+                                        <div class="info">Informação</div>
+                                    </li>
+                                    <li>
+                                        <div class="hora">19:00</div>
+                                        <div class="info">Coffe Break</div>
+                                    </li>
+                                    <li>
+                                        <div class="hora">20:00</div>
+                                        <div class="info">Informação</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div id="incricaoProgramacao">
+                        <h2 class="inscrevase"><a href="#">Inscreva-se!</a></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section blue">
+                <div id="fotoMetade2" class="page metade">
+                    <div class="cover"></div>
+
+                </div>
+            </div>
+
+            <div class="section blue">
+                <div id="inscricao" class=" page">
+                        <div id="formulario">
+                            <div id="left_col">
+                                <div class="campos">
+                                    <label>
+                                        Nome:
+                                    </label>
+                                    <br/>
+                                    <input type="text" id="nome"/>
+
+                                </div>
+
+                                <div class="campos">
+                                    <label>
+                                        E-mail:
+                                    </label>
+                                    <br/>
+                                    <input type=email required id="email"/>
+                                </div>
+                                <div class="campos">
+                                    <label>
+                                        Telefone:
+                                    </label>
+                                    <br/>
+                                    <input type="text" id="fone"/>
+                                </div>
+                            </div>
+                            <div id="right_col">
+                                <div class="campos">
+                                    <label>
+                                        Empresa:
+                                    </label>
+                                    <br/>
+                                    <input type="text" id="empresa"/>
+                                </div>
+                                <div class="campos">
+                                    <label>
+                                        Telefone da Empresa:
+                                    </label>
+                                    <br/>
+                                    <input type="text" id="foneEmpresa"/>
+                                </div>
+
+                                <div class="campos">
+                                    <label>
+                                        CNPJ:
+                                    </label>
+                                    <br/>
+                                    <input type="text" id="cnpj"/>
+                                </div>
+                            </div>
+
+
+                            <button type=submit>ENVIAR</button>
+                        </div>
+                </div>
+            </div>
+            <div class="section blue">
+                <div id="localizacao">
+                    <div class="content" style="display: block;">
+                        <div class="box-localizacao">
+                            <address>
+                                O evento será realizada nas dependências do SENAI/SC - Blumenau,<br/>
+                                Rua São Paulo, número 1147, Sala Multiuso, Bloco A. <br/>
+                                Mais informações pelo telefone: (47) 3321-9644.
+                            </address>
+                            <h2 id="verMapa" class="yes"><a class="yes">Veja no Google Maps</a></h2>
+                            <div id="compartilhar">
+                                <a target="parent" href="http://www.facebook.com/sharer.php?u=http://www.seblutic.com.br/&t=SEBLUTIC 2014"> <img src="img/face.png" alt="facebook/seblutic.bnu"/> </a>
+                                <a target="parent" href="http://twitter.com/share?text=SEBLUTIC 2014 - Semana Blumenauense da Tecnologia da Informação e Comunicação @seblutic&url=http://www.seblutic.com.br"><img src="img/tw.png" alt="twitter/seblutic"/></a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+
+    </body>
+</html>

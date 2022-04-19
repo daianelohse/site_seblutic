@@ -1,0 +1,572 @@
+body {
+    margin:0;
+}
+
+.centralizar {
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#menu {
+    margin: 0 0 0 170px;
+}
+
+#logomarca {
+    background-color:#000000;
+    border-bottom-right-radius:2em;
+    padding-right:0.5em;
+    display: block;
+    z-index:3;
+    top: -13px;
+    right: 30px;
+    position: fixed;
+}
+
+nav {
+    top: 0;
+    width:100%;
+    background-color:#000000;
+    word-spacing:3em;
+    text-align:center;
+    z-index:2;
+    height: 50px;
+}
+
+nav ul li{
+    
+	display:inline;
+}
+
+nav a {
+    font-family:"CoreHumanistSans","arial","helvetica";
+    text-decoration:none;
+    color:#ffffff;
+    font-size:17.5px;
+}
+
+nav a:hover {
+    transition: all 1.55s ease-out 0s;
+    opacity:0.6;
+
+}
+
+.active {
+    color:#00ccff;
+}
+
+#home .cover {
+    background-image:url('../img/blumenau4.jpg');
+    background-size:100% 130%;
+    height: 1360px;
+    background-repeat: no-repeat;
+}
+
+.cover {
+    top:0;
+}
+
+.page .cover {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+#home .page {
+    background-color: #23282B;
+    height: 905px;
+}
+
+.page {
+    background-color: #00CCFF;
+    background-repeat: no-repeat;
+    float: left;
+    min-height: 925px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+#titulo-principal h1 {
+    text-align:center;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    font-size: 70px;
+}
+
+#titulo-principal p {
+    text-align:center;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    font-size: 25px;
+
+}
+
+#home.page .content {
+    color: #E6DEDB;
+    padding-top: 150px;
+    position: relative;
+    z-index: 1;
+}
+
+.page .content, .content {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: auto;
+}
+
+.letra-azul {
+    color:#9edbf7;
+}
+
+#sobre h2, #palestrantes h2, #incricaoProgramacao h2, #localizacao h2 {
+    font-family:"Humnst777 Lt BT","MuseoSans","Georgia","Times New Roman";
+    font-size:25px;
+    text-align:center;
+    line-height:5em;  
+    font-weight:bold;
+}
+
+#sobre a:hover, #palestrantes a:hover, #incricaoProgramacao a:hover, #verMapa a:hover {
+    transition: all 0.45s ease-out 0s;
+    background-color:#000000;
+    color:#ffffff;
+}
+
+#palestrantes a:hover {
+    transition: all 0.45s ease-out 0s;
+    background-color:#000000;
+    color:#000000;
+    background-color:#00CCFF;
+    border-color:#000000;
+}
+
+#sobre a, #incricaoProgramacao a, #verMapa a {
+    border-style:double;
+    padding:0.3em 2em 0.3em 2em;
+    text-decoration:none;
+    color:#000000;
+}
+
+#palestrantes a {
+    border-style:double;
+    border-color:#E6DEDB;
+    padding:0.3em 2em 0.3em 2em;
+    text-decoration:none;
+    color:#E6DEDB; 
+}
+
+#sobre p {
+    font-family:"Humnst777 Lt BT","MuseoSans","Georgia","Times New Roman";
+    font-size:25px;
+    text-align:justify;
+    line-height:170%;
+    background-attachment: fixed;
+    top:0;
+
+}
+
+#sobre {
+    top:0;
+}
+
+#palestrantes {
+    background-color:#23282B;
+}
+
+#sobre h1, #palestrantes h1, #programacao h1, #inscricao h1, #localizacao h1, #parceria h1, #patrocinio h1 {
+    text-align:center;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    font-size: 50px;
+    transition: all 0.25s ease-out 0s;
+    color:#E6DEDB;
+    margin-top:3em;
+    padding-bottom:1.5em;
+}
+
+#sobre h1, #programacao h1,#localizacao h1  {
+    color:#000000;
+}
+
+#palestrantes ul {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95.7895%;
+}
+
+ul {
+    list-style: none outside none;
+    padding-left: 0;
+}
+
+/*
+.csstransforms3d #palestrantes li {
+    perspective: 1000px;
+}
+*/
+
+#palestrantes li {
+    float: left;
+    height: 189px;
+    margin-bottom: 70px;
+    margin-right:3em;
+    position: relative;
+    width: 189px;
+    border:1px solid #23282B;
+}
+
+#palestrantes img {
+    width: 189px;
+
+}
+
+
+/* Estilos para o efeito 3d 
+.csstransforms3d #palestrantes .rotation-container img {
+    transform: rotateX(0deg) translateZ(95px);
+}
+
+
+#palestrantes img:hover {
+   transform:rotateX(-1820deg);
+   transform:rotateY(-820deg);
+-ms-transform:rotateY(95px);  IE 9 
+-webkit-transform:rotate(7deg); Safari e Chrome
+-webkit-transform: perspective(100); 
+}
+
+
+
+#palestranes .rotation-container img {
+    border: 2px solid #FFFFFF;
+    display: block;
+    height: 189px;
+    position: absolute;
+    top: 0;
+    width: 189px;
+}
+
+#palestrantes .rotation-container .description {
+    background-color:#FF664C;
+    border: 2px solid #FFFFFF;
+    display: none;
+    height: 189px;
+    left: 0;
+    overflow-y: auto;
+    padding: 13px;
+    position: absolute;
+    width: 189px;
+}
+*/
+
+#palestrantes .descricaoPalestrantes{
+    position:relative; 
+    top:-140px;
+    padding:1px;
+    background:#333;
+    color:#fff;
+    display: block;
+    font-size:16px;
+    color:#ffffff;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    text-align:center;
+    transition: all 1.55s ease-out 0s;
+    cursor:default;
+}
+
+#palestrantes img:hover {
+    transition: all 0.45s ease-out 0s;
+    opacity:0.5;
+}
+
+.descricaoOpaca  {
+    display:none;
+}
+
+.nomesPalest {
+    font-size:20px;
+}
+
+.metade {
+    min-height:560px;
+}
+
+#fotoMetade1 .page {
+    background-color: #23282B;
+    height: 560px;
+}
+
+#fotoMetade1 {
+    background-image: url("../img/teste.jpg");
+    height: 800px;
+    background-size:100% 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    -khtml-background-size: 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#menuProgramacao ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    text-align:center;
+}
+
+#menuProgramacao ul li { display: inline; }
+
+#menuProgramacao ul li a {
+    display: inline-block;
+    /* visual do link */
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    font-size:18px;
+    font-weight:bolder;
+    margin-right:2em;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    margin-bottom:1em;
+    cursor:pointer;
+}
+
+#menuProgramacao a:hover {
+    transition: all 0.55s ease-out 0s;
+    border-top-left-radius:2em;
+    opacity:0.6;
+}
+
+#listaProgramacao li .hora, #listaProgramacao li .info, #listaProgramacao li .ico {
+    -moz-box-sizing: border-box;
+    float: left;
+    padding: 25px 0 25px 0px;
+    position: relative;
+    width: 12%;
+}
+
+#listaProgramacao li .hora:after, #listaProgramacao ul.info li .ico:after {
+    background: none repeat scroll 0 0 #A3ADAF;
+    border-radius: 15px;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: -9px;
+    top: 26px;
+    width: 15px;
+    z-index: 1;
+}
+
+#listaProgramacao ul {
+    font-size: 18px;
+    text-align: left;
+    margin-top:2em;
+    overflow: hidden;
+}
+
+#listaProgramacao li .info {
+    border-left: 4px solid #545253;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 88%;
+}
+
+#listaProgramacao li .info, #listaProgramacao li .hora {
+    border-bottom: 2px solid #545253;
+}
+
+#listaProgramacao ul li{
+    background-color:#151618;
+    color:#E6DEDB;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+}
+
+#programacao .dataProgramacao {
+    background-color:#00CCFF;
+    color:#000000;
+    font-size:17px;
+    margin-bottom:-2em;
+}
+
+
+#listaProgramacao {
+    background-color:#151618 !important;
+    color:#E6DEDB;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";
+    margin-top:2.6em;
+}
+
+#listaProgramacao .hora {
+    text-align:center;
+}
+
+.metade {
+    min-width:900px;
+}
+
+
+#fotoMetade2  {
+    background-image:url('../img/montagemsenai17.jpg');
+    background-size:100% 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    -khtml-background-size: 100%;
+    -moz-background-size: 100% 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+
+
+#inscricao {
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica";  
+}
+
+.campos  { 
+    overflow: hidden; /* this "clears" the floated elements */
+    margin-bottom: 2em;
+}
+
+
+.campos input {
+    width: 99%;
+    height:2em;
+    font-size:16px;
+    font-family:arial;
+    background-color:#00CCFF;
+    border:hidden;
+    border:1px solid #000000;
+    border-bottom-right-radius:1em;
+    opacity:0.4;
+}
+
+.campos input:focus {
+    opacity:1;
+}
+
+#inscricao {
+    background-color:#151618;
+}
+
+#formulario {
+    padding:6em 3em 3em 3em;   
+    color:#000000;
+    font-size:19px;
+    
+}
+
+
+#formulario button {
+    float:right;
+    background-color:#000000;  
+    color:#00CCFF;
+    font-size:19px;
+    border:hidden;
+    padding-right:1em;
+    padding-left:1em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+#email, #fone, #foneEmpresa, #cnpj {
+    width:50%;
+}
+
+.infoBox { background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 10px }
+.infoBox p { padding: 0 15px }
+.infoBox:before { border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
+
+#localizacao.page .content .box-localizacao {
+    width: 100%;
+    text-align: center;
+}
+
+.box-localizacao h1, address {
+    text-align:center;
+    padding-top:1em;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.box-localizacao address {
+    font-style:normal;
+    font-family:"Humnst777 Lt BT","Humnst777 BT","CoreHumanistSans","arial","helvetica"; 
+    line-height:150%;
+    font-size:18px;
+}
+
+#localizacao h2 {
+    font-size:19px;
+}
+
+#localizacao img, #localizacao #compartilhar {
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    margin-top:-2em;
+}
+
+#compartilhar a:hover {
+    transition: all 0.45s ease-out 0s;
+    opacity:0.5;
+}
+
+
+#localizacao.page .content {
+    background-color:rgba(0, 204, 255, 0.8);
+    color: #000000;
+    height: 925px;
+    padding-top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+#verMapa a {
+    cursor:pointer;
+}
+
+#localizacao.page #fechar:after {
+    background-image: url("../img/fechar.png");
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 37px;
+    left: 50%;
+    margin: -18.5px 0 0 -18.5px;
+    position: absolute;
+    top: 50%;
+    width: 37px;
+}
+
+#localizacao.page #fechar {
+    background-color: rgba(0, 204, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 96px;
+    left: 50%;
+    margin: -48px 0 0 -48px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -34em;
+    top: 50%;
+    transition: all 0.25s ease-out 0s;
+    width: 96px;
+    z-index: 1;
+}
+
+#localizacao.page #fechar:hover {
+    background-color: rgba(0, 204, 255, 1);
+    transition: all 0.25s ease-out 0s;
+}
+
+#rodape{
+    background-color:#151618;
+}
+
